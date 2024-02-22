@@ -27,12 +27,18 @@ body {
   font-size: 6.25rem;
   margin: 0;
   line-height: 97.3%;
+  max-width: 525px;
 }
 
-.top-section p {
+.intro-text {
   font-size: 1.25rem;
   line-height: 169.3%;
   margin: 1rem 0;
+  max-width: 435px;
+}
+
+.intro-buttons {
+  margin-bottom: 129px;
 }
 
 .our-btn {
@@ -53,4 +59,20 @@ body {
 
 .utility-mr {
   margin-right: 10px;
+}
+
+.intro-feature {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 33px 25px;
+}
+
+.intro-feature p {
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.intro-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
 }
