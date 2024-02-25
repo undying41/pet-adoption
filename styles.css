@@ -6,7 +6,11 @@ html {
 }
 
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .top-section-wrapper {
@@ -162,7 +166,7 @@ body {
 .pet-filter button {
   background-color: transparent;
   border: none;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 1.15rem;
   color: #9f9f9f;
 }
