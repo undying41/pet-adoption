@@ -20,6 +20,7 @@ async function petsArea() {
   petsData.forEach((pet) => {
     const clone = template.content.cloneNode(true);
     clone.querySelector("h3").textContent = pet.name;
+    clone.querySelector(".pet-card").dataset.species = pet.species;
     clone.querySelector(".pet-description").textContent = pet.description;
     clone.querySelector(".pet-age").textContent = createTextAge(pet.birthYear);
 
@@ -42,4 +43,27 @@ function createTextAge(birthYear) {
   if (age == 0) return "Less than year old";
 
   return `${age} years old`;
+}
+
+const allButtons = document.querySelectorAll(".pet-filter button");
+
+// Pet filter button code
+allButtons.forEach((el) => {
+  el.addEventListener("click", handleButtonClick);
+});
+
+function handleButtonClick(e) {
+  allButtons.forEach((el) => el.classList.remove("active"));
+
+  e.target.classList.add("active");
+
+  const currentFilter = e.target.dataset.filter;
+
+  document.querySelectorAll(".pet-card").forEach((el) => {
+    if (currentFilter == el.dataset.species || currentFilter == "all") {
+      el.style.display = "grid";
+    } else {
+      el.style.display = "none";
+    }
+  });
 }
